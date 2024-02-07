@@ -1,6 +1,4 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 yarn
+git add yarn.lock
 yarn lint-staged
 yarn test
