@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## TODO documentation
 
-## Getting Started
+## Overview
+This is the Protofy Next.js starter project. It can be used as a starting point for new web projects.  
+It includes the following features/tools:
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Storybook](https://storybook.js.org/)
+- [Vitest](https://https://vitest.dev/)
+- [msw](https://mswjs.io/)
+- [Vercel CLI](https://vercel.com/docs/cli)
 
-First, run the development server:
+## Project structure
+The recommended structure for the project is as follows:
+- `src`: The main source folder
+  - `assets`: Images, fonts, etc.
+  - `components`: Reusable components
+    - `ComponentName`: Component folder
+      - `ComponentName.tsx`: Component file
+      - `ComponentName.stories.tsx`: Storybook stories
+      - `ComponentName.test.tsx`: Component tests
+  - `const`: Shared constants
+  - `hooks`: Custom hooks
+  - `mocks`: API mocks
+    - `handlers.ts`: Mock API handlers
+  - `types`: TypeScript types
+  - `utils`: Utility functions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Setup
+Some features might work best with VSCode (e.g. automated linting), so it is recommended to use it as the main code editor.  
+Contributions are welcome, so please create a PR if you want to add features for your favorite editor. 🙂
+
+Here's how to get started:
+1. Clone the repository
+2. Run `yarn` to install the dependencies
+3. Run `yarn dev` to start the development server
+
+## Linting
+The project uses ESLint and Prettier to enforce code style. You can run `yarn lint` to check for linting errors and `yarn lint:fix` to fix them. If you use VSCode, fixing automatically happens on save. This is configured in [.vscode/settings.json](.vscode/settings.json).  
+The project also includes a pre-commit hook that runs the linter via `lint-staged` before committing. This is configured in [.husky/pre-commit](.husky/pre-commit).
+
+## Testing
+The project uses Vitest for testing. You can run `yarn test` to run the tests or `yarn test:watch` to run the tests in watch mode.  
+The project also includes msw to mock API requests. You can find an example for mocks in [src/mocks/handlers.ts](src/mocks/handlers.ts) and for tests using those mocks in [src/mocks/handlers.test.ts](src/mocks/handlers.test.ts).  
+The mocks are initialized in [vitest-setup.ts](./vitest-setup.ts).
+
+## Storybook
+The project includes Storybook for component development. You can run `yarn storybook` to start the Storybook server. 
+
+### Server components
+Support for Next.js server components is currently experimental.  
+Add a `<Suspense>` component around your Story in the decorator like this to use a server component:
+```tsx
+decorators: [
+  Story => (
+    <Suspense>
+      <Story />
+    </Suspense>
+  ),
+],
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Deployment
+The easiest way to deploy the project is to use Vercel. The Vercel CLI is already included in the project in case you want to use features like syncing environment variables.  
+To deploy using Vercel, you need to create a new Vercel project and link it to the GitHub repository using the Vercel website.  
+This will automagically create a new deployment whenever you push to the GitHub repository. ✨
