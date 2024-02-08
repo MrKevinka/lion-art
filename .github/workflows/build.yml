@@ -1,0 +1,18 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest-4cores-16gb
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up node using nvm
+      uses: dcodeIO/setup-node-nvm@v5
+    - run: yarn
+    - run: yarn test
+    - run: yarn build
