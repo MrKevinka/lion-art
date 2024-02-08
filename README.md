@@ -1,15 +1,25 @@
-## Overview
 This is the Protofy Next.js starter project. It can be used as a starting point for new web projects.  
 It includes the following features/tools:
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Storybook](https://storybook.js.org/)
-- [Vitest](https://https://vitest.dev/)
-- [msw](https://mswjs.io/)
-- [Vercel CLI](https://vercel.com/docs/cli)
+- [Next.js](https://nextjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for code style
+- [Storybook](https://storybook.js.org/) for component development
+- [Vitest](https://https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [msw](https://mswjs.io/) for testing
+- [Husky](https://typicode.github.io/husky/) for git hooks
+- [Next.js Bundle Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) to visualize the size of the production build
+- [Vercel CLI](https://vercel.com/docs/cli) for connecting to Vercel projects
+
+## Table of Contents
+- [Project structure](#project-structure)
+- [Setup](#setup)
+- [Environment variables](#environment-variables)
+- [Linting](#linting)
+- [Testing](#testing)
+- [Storybook](#storybook)
+  - [Server components](#server-components)
+- [Git Hooks](#git-hooks)
+- [Bundle Analyzer](#bundle-analyzer)
+- [Deployment](#deployment)
 
 ## Project structure
 The recommended structure for the project is as follows:
@@ -38,7 +48,8 @@ Here's how to get started:
 
 ## Environment variables
 Next.js automatically picks up environment variables from `.env.local` and `.env`.  
-If your project is deployed to Vercel, you can set environment variables in the Vercel project dashboard. To use those environment variables locally, you can run `yarn env:pull` to sync them to your local `.env.local` file. You might need to link your project first using `yarn vercel link`.
+If your project is deployed to Vercel, you can set environment variables in the Vercel project dashboard. To use those environment variables locally, you can run `yarn env:pull` to sync them to your local `.env.local` file.  
+You might need to link your project first using `yarn vercel link`.  
 **Warning**: Pulling the env variables will overwrite any changes you made to your local `.env.local` file.
 
 ## Linting
@@ -66,7 +77,19 @@ decorators: [
 ],
 ```
 
+## Git Hooks
+The project uses Husky to run git hooks. The [pre-commit hook](./.husky/pre-commit) runs a few things before committing:
+- `yarn` to make sure the dependencies are up to date
+- `git add yarn.lock` to make sure the lock file is up to date
+- `yarn lint-staged` to check for linting errors
+- `yarn test` to run the tests
+
+## Bundle Analyzer
+The project includes the [Next.js bundle analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) to visualize the size of the production build. You can run `yarn build:analyze` to start the bundle analyzer. This will build the project and open a new tab in your browser with the bundle analyzer.
+
 ## Deployment
 The easiest way to deploy the project is to use Vercel. The Vercel CLI is already included in the project in case you want to use features like syncing environment variables.  
 To deploy using Vercel, you need to create a new Vercel project and link it to the GitHub repository using the Vercel website.  
 This will automagically create a new deployment whenever you push to the GitHub repository. ✨
+
+For other deployment options, check the [Next.js documentation](https://nextjs.org/docs/app/building-your-application/deploying).
