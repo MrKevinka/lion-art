@@ -1,3 +1,5 @@
+[![Build and Test](https://github.com/protofy/nextjs-template/actions/workflows/build.yml/badge.svg)](https://github.com/protofy/nextjs-template/actions/workflows/build.yml)
+
 This is the Protofy Next.js starter project. It can be used as a starting point for new web projects.  
 It includes the following features/tools:
 - [Next.js](https://nextjs.org/) with [TypeScript](https://www.typescriptlang.org/)
