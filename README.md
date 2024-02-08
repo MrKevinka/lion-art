@@ -1,5 +1,3 @@
-## TODO documentation
-
 ## Overview
 This is the Protofy Next.js starter project. It can be used as a starting point for new web projects.  
 It includes the following features/tools:
@@ -37,6 +35,11 @@ Here's how to get started:
 1. Clone the repository
 2. Run `yarn` to install the dependencies
 3. Run `yarn dev` to start the development server
+
+## Environment variables
+Next.js automatically picks up environment variables from `.env.local` and `.env`.  
+If your project is deployed to Vercel, you can set environment variables in the Vercel project dashboard. To use those environment variables locally, you can run `yarn env:pull` to sync them to your local `.env.local` file. You might need to link your project first using `yarn vercel link`.
+**Warning**: Pulling the env variables will overwrite any changes you made to your local `.env.local` file.
 
 ## Linting
 The project uses ESLint and Prettier to enforce code style. You can run `yarn lint` to check for linting errors and `yarn lint:fix` to fix them. If you use VSCode, fixing automatically happens on save. This is configured in [.vscode/settings.json](.vscode/settings.json).  
