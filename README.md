@@ -6,7 +6,7 @@ It includes the following features/tools:
 - [Tailwind CSS](https://tailwindcss.com/) for styling
 - [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for code style
 - [Storybook](https://storybook.js.org/) for component development
-- [Vitest](https://https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [msw](https://mswjs.io/) for testing
+- [Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) and [msw](https://mswjs.io/) for testing
 - [Husky](https://typicode.github.io/husky/) for git hooks
 - [Next.js Bundle Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer) to visualize the size of the production build
 - [Vercel CLI](https://vercel.com/docs/cli) for connecting to Vercel projects
