@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Heading } from './Heading';
 
 export default {
-  title: 'Components/Atoms/Heading',
+  title: 'Components/Heading',
   component: Heading,
   args: {
     text: 'Hello, World!',

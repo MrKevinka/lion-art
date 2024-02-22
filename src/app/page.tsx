@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 import ProtofyLogo from '@/assets/protofy_logo.png';
-import { Heading } from '@/components/Atoms/Heading/Heading';
-import { WelcomeText } from '@/components/Atoms/WelcomeText/WelcomeText';
+import { Heading } from '@/components/Heading/Heading';
+import { WelcomeText } from '@/components/WelcomeText/WelcomeText';
 
 export default function Home() {
   const headingText = 'Hello, World!';

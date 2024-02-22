@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { WelcomeText } from './WelcomeText';
 
 export default {
-  title: 'Components/Atoms/WelcomeText',
+  title: 'Components/WelcomeText',
   component: WelcomeText,
   args: {
     text: 'This is the welcome text!',
