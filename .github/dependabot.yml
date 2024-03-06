@@ -53,3 +53,4 @@ updates:
         patterns:
           - "@types/node"
           - "typescript"
+          - "tsconfig-paths-webpack-plugin"
