@@ -26,6 +26,7 @@ updates:
       eslint:
         patterns:
           - "*eslint*"
+          - "prettier"
           - "prettier-plugin-tailwindcss"
       nextjs:
         patterns:
