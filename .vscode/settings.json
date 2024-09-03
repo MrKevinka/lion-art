@@ -1,12 +1,7 @@
 {
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "[jsonc][json]": {
@@ -16,5 +11,16 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "github.copilot.enable": {
+    "*": false,
+    "css": true,
+    "html": true,
+    "json": true,
+    "markdown": true,
+    "javascript": true,
+    "typescript": true,
+    "typescriptreact": true,
+    "yaml": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
