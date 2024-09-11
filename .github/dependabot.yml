@@ -7,10 +7,11 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
-    assignees:
-      - "z0n"
-    reviewers:
-      - "z0n"
+    # add your reviewers and assignees for dependabot PRs here
+    # assignees:
+    #   - "z0n"
+    # reviewers:
+    #   - "z0n"
     groups:
       ci:
         patterns:
