@@ -1,14 +1,17 @@
-import BundleAnalyzer from '@next/bundle-analyzer';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    dirs: ['.'],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
+      },
+    ],
   },
 };
 
-const withBundleAnalyzer = BundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;
