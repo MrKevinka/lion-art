@@ -10,8 +10,6 @@
     "start": "next start",
     "lint": "next lint && tsc --noEmit",
     "lint:fix": "next lint --fix",
-    "test": "vitest --run",
-    "test:watch": "vitest --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "env:pull": "vercel env pull .env.local",
@@ -48,7 +46,6 @@
     "tsconfig-paths-webpack-plugin": "4.1.0",
     "typescript": "5.5.3",
     "vercel": "37.4.1",
-    "vite-tsconfig-paths": "4.3.2",
-    "vitest": "1.6.0"
+    "vite-tsconfig-paths": "4.3.2"
   }
 }

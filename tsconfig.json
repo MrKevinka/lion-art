@@ -38,7 +38,6 @@
     ".storybook/main.ts",
     ".storybook/preview.tsx",
     ".eslintrc.cjs",
-    "vitest-setup.ts",
     "*.config.mjs",
     "*.config.js",
     "*.config.ts",
